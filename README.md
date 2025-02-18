@@ -34,7 +34,7 @@ The `emd_34610.map` is the density map with EMD ID: 34610 downloaded from EMDB w
 
 The `8hb0.pdb` file is a PDB structure file used in this test example to generate embeddings using ESM. Alternatively, users can use the `8hb0.fasta` file to generate embeddings from ESM.
 
-The first step is to make input cryo-EM map ready for Cryo2Struct. We run [UCSF ChimeraX](https://www.cgl.ucsf.edu/chimerax/index.html) in non-GUI mode to resample the density map to 1 Angstrom, please install it to preprocess the map. We used ChimeraX 1.4-1 in CentOS 8 system. Once ChimeraX is installed, then please run the following.
+The first step is to make input cryo-EM map ready for Cryo2Struct2. We run [UCSF ChimeraX](https://www.cgl.ucsf.edu/chimerax/index.html) in non-GUI mode to resample the density map to 1 Angstrom, please install it to preprocess the map. We used ChimeraX 1.4-1 in CentOS 8 system. Once ChimeraX is installed, then please run the following.
 
 ```
 bash preprocess/run_data_preparation.bash input/
@@ -129,7 +129,7 @@ Request AlphaFold3 parameters and follow the instructions to set up AlphaFold3 f
 Use the script [run_af3_docker_all.py](run_af3_docker_all.py) to run AlphaFold3 and to predict structures.
 
 
-## Training Cryo2Struct Deep Learning
+## Training Cryo2Struct2 Deep Learning
 The training programs are available in the [train/](train/) directory. Cryo2Struct2 was trained on Cryo2StructData, which is accessible on the [Cryo2StructData Dataverse](https://doi.org/10.7910/DVN/FCDG0W). Download the full dataset from [Cryo2Struct Full Dataset](https://doi.org/10.7910/DVN/FCDG0W) or a small subset from [Cryo2Struct Small Subsample Dataset](https://doi.org/10.7910/DVN/CGUENL). After downloading the dataset, `unzip` the compressed files. The directory names are the EMD ID of the cryo-EM density map.
 
 The dataset contains the preprocessed map ready for deep learning training. However, the cryo-EM density map label needs to be prepared. Run the following
