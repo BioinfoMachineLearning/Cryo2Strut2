@@ -1,0 +1,14 @@
+density_map_name: '15698'
+input_data_dir: '/input' # provide absolute path of input directory
+amino_checkpoint: '/models/amino_acid_type.ckpt' # provide absolute path of amino acid checkpoint
+atom_checkpoint: '/models/atom_type.ckpt' # provide absolute path of atom checkpoint
+confidence_score_models: '/models' # provide absolute path of models directory
+infer_run_on: 'gpu' # options- cpu or gpu
+infer_on_gpu: 1
+threshold: 0.4 # threshold for picking carbon alpha atoms
+clustering_threshold: 2 # clustering proximity
+use_sequence: 'atomic_chain' # options- full or atomic_chain
+std_lambda: 10
+reverse_seq: False
+
+
